@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JMBG_Validator</string>
+    <string name="ime">Unesite vaše ime</string>
+    <string name="prezime">Unesite vaše prezime</string>
+    <string name="validiraj">Validiraj</string>
+    <string name="jmbg">Unesite vaš JMBG</string>
+</resources>
