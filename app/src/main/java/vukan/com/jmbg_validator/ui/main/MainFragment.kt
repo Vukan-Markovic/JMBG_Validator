@@ -25,6 +25,11 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        binding.validirajButton.isEnabled = false
+
+        binding.validirajButton.setOnClickListener {
+            viewModel.validirajJMBG(binding.jmbg.text.toString())
+        }
 
         // Set error text
         //passwordLayout.error = getString(R.string.error)

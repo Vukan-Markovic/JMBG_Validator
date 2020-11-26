@@ -13,24 +13,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedIme"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/Widget.App.TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/ime"
-        android:textColorHint="@color/secondary_text"
-        app:counterEnabled="true"
-        app:counterMaxLength="13"
-        app:counterTextColor="@color/accent"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/icons"
-        app:errorEnabled="true"
-        app:helperText="JMBG se sastoji samo od cifara"
-        app:helperTextColor="@color/accent"
-        app:helperTextEnabled="true"
-        app:hintTextColor="@color/accent"
+        app:counterMaxLength="20"
+        app:helperText="JMBG može da se sastoji samo od cifara"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -40,47 +31,64 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="@string/ime"
-            android:fontFamily="@font/francois_one"
             android:inputType="textPersonName"
             android:selectAllOnFocus="true"
             android:textColor="@color/primary_text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/prezime"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedPrezime"
+        style="@style/Widget.App.TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:autofillHints="Prezime"
         android:hint="@string/prezime"
-        android:imeActionLabel="Validiraj"
-        android:imeOptions="actionDone"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="true"
+        app:counterMaxLength="40"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedIme" />
+        app:layout_constraintTop_toBottomOf="@+id/outlinedIme">
 
-    <EditText
-        android:id="@+id/jmbg"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/prezime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Prezime"
+            android:imeActionLabel="Validiraj"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedJMBG"
+        style="@style/Widget.App.TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:autofillHints="JMBG"
         android:hint="@string/jmbg"
-        android:imeOptions="actionDone"
-        android:inputType="number"
-        android:selectAllOnFocus="true"
+        app:counterMaxLength="13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prezime" />
+        app:layout_constraintTop_toBottomOf="@+id/outlinedPrezime">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/jmbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="JMBG"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:selectAllOnFocus="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/validirajButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,12 +104,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prezime"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedJMBG"
         app:layout_constraintVertical_bias="0.2"
         app:rippleColor="@color/accent"
         tools:targetApi="lollipop" />
 
-    <ProgressBar
+    <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -112,8 +120,8 @@
         android:layout_marginBottom="64dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/prezime"
-        app:layout_constraintStart_toStartOf="@+id/prezime"
+        app:layout_constraintEnd_toEndOf="@+id/outlinedPrezime"
+        app:layout_constraintStart_toStartOf="@+id/outlinedPrezime"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

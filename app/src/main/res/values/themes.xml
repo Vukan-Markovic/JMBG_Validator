@@ -8,5 +8,6 @@
         <item name="colorSecondaryVariant">@color/primary_light</item>
         <item name="colorOnSecondary">@color/secondary_text</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="fontFamily">@font/francois_one</item>
     </style>
 </resources>
