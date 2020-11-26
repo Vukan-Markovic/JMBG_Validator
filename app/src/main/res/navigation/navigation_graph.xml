@@ -2,14 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_graph"
     app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="vukan.com.jmbg_validator.ui.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/main_fragment">
+        tools:layout="@layout/fragment_main">
 
         <action
             android:id="@+id/action_mainFragment_to_resultFragment"
@@ -18,15 +17,17 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-
-        <argument
-            android:name="jmbg"
-            app:argType="string" />
     </fragment>
 
     <fragment
         android:id="@+id/resultFragment"
         android:name="vukan.com.jmbg_validator.ui.result.ResultFragment"
         android:label="ResultFragment"
-        tools:layout="@layout/result_fragment" />
+        tools:layout="@layout/fragment_result">
+
+        <argument
+            android:name="user"
+            app:argType="vukan.com.jmbg_validator.data.model.User" />
+
+    </fragment>
 </navigation>

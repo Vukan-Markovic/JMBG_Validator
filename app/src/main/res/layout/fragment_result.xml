@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.App.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="@color/primary"
+    app:cardElevation="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:rippleColor="@color/primary_light"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/name_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/surname"
+            app:layout_constraintStart_toEndOf="@id/name_label"
+            app:layout_constraintStart_toStartOf="@+id/surname"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Vukan" />
+
+        <TextView
+            android:id="@+id/surname_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/surname_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+        <TextView
+            android:id="@+id/surname"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/jmbg"
+            app:layout_constraintStart_toEndOf="@id/surname_label"
+            app:layout_constraintStart_toStartOf="@+id/jmbg"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="Marković" />
+
+        <TextView
+            android:id="@+id/jmbg_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jmbg_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname_label" />
+
+        <TextView
+            android:id="@+id/jmbg"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/country"
+            app:layout_constraintStart_toEndOf="@id/jmbg_label"
+            app:layout_constraintStart_toStartOf="@+id/country"
+            app:layout_constraintTop_toBottomOf="@id/surname"
+            tools:text="0811997810072" />
+
+        <TextView
+            android:id="@+id/country_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jmbg_label" />
+
+        <TextView
+            android:id="@+id/country"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/region"
+            app:layout_constraintStart_toEndOf="@id/country_label"
+            app:layout_constraintStart_toStartOf="@+id/region"
+            app:layout_constraintTop_toBottomOf="@id/jmbg"
+            tools:text="Srbija" />
+
+        <TextView
+            android:id="@+id/region_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/region_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_label" />
+
+        <TextView
+            android:id="@+id/region"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/gender"
+            app:layout_constraintStart_toEndOf="@id/region_label"
+            app:layout_constraintStart_toStartOf="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@id/country"
+            tools:text="Sombor" />
+
+        <TextView
+            android:id="@+id/gender_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/region_label" />
+
+        <TextView
+            android:id="@+id/gender"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/ordinal_number_of_birth"
+            app:layout_constraintStart_toEndOf="@id/gender_label"
+            app:layout_constraintStart_toStartOf="@+id/ordinal_number_of_birth"
+            app:layout_constraintTop_toBottomOf="@id/region"
+            tools:text="Muško" />
+
+        <TextView
+            android:id="@+id/date_of_birth_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_of_birth_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_label" />
+
+        <TextView
+            android:id="@+id/date_of_birth"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ordinal_number_of_birth_label"
+            app:layout_constraintTop_toBottomOf="@id/gender"
+            tools:text="08.11.1997." />
+
+        <TextView
+            android:id="@+id/ordinal_number_of_birth_label"
+            style="@style/Widget.TextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ordinal_number_of_birth_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_of_birth_label" />
+
+        <TextView
+            android:id="@+id/ordinal_number_of_birth"
+            style="@style/Widget.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ordinal_number_of_birth_label"
+            app:layout_constraintTop_toBottomOf="@id/date_of_birth"
+            tools:text="7" />
+
+        <com.google.android.material.button.MaterialButton
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accent"
+            android:text="Ponovo"
+            android:textColor="@color/primary_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ordinal_number_of_birth_label"
+            tools:targetApi="lollipop" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/jmbg"
+            app:layout_constraintStart_toStartOf="@+id/jmbg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

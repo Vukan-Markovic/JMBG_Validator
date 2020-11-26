@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="Theme.MaterialComponents.DayNight.DarkActionBar" />
+
+    <style name="Widget.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:minHeight">@dimen/min_text_height</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+    </style>
+
+    <style name="Widget.TextViewLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/secondary_text</item>
+        <item name="android:minHeight">@dimen/min_text_height</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+    </style>
 
     <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintTextColor">@color/accent</item>
         <item name="helperTextEnabled">true</item>
         <!--item name="helperTextColor">?attr/colorAccent</item-->
+        <!--item name="textColorHint">@color/secondary_text</item-->
         <item name="errorEnabled">true</item>
         <item name="endIconTint">@color/icons</item>
         <item name="endIconMode">clear_text</item>
         <item name="counterEnabled">true</item>
         <item name="counterTextColor">@color/accent</item>
-        <!--item name="textColorHint">@color/secondary_text</item-->
     </style>
 
     <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
