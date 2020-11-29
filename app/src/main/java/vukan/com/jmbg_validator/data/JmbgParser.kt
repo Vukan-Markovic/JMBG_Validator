@@ -63,22 +63,21 @@ class JmbgParser {
                 var dayOfWeekBirth = ""
                 val c = Calendar.getInstance()
 
-                if (region in 1..9) {
-                    countryOfBirth = context.getString(R.string.foreigners)
-                    placeOfBirth = when (region) {
-                        1 -> context.getString(R.string.foreigners_BIH)
-                        2 -> context.getString(R.string.foreigners_Montenegro)
-                        3 -> context.getString(R.string.foreigners_Croatia)
-                        4 -> context.getString(R.string.foreigners_Macedonia)
-                        5 -> context.getString(R.string.foreigners_Slovenia)
-                        7 -> context.getString(R.string.foreigners_Serbia)
-                        8 -> context.getString(R.string.foreigners_Vojvodina)
-                        9 -> context.getString(R.string.foreigners_KIM)
-                        else -> context.getString(R.string.invalid_region)
-                    }
-                }
-
                 when (region) {
+                    in 1..9 -> {
+                        countryOfBirth = context.getString(R.string.foreigners)
+                        placeOfBirth = when (region) {
+                            1 -> context.getString(R.string.foreigners_BIH)
+                            2 -> context.getString(R.string.foreigners_Montenegro)
+                            3 -> context.getString(R.string.foreigners_Croatia)
+                            4 -> context.getString(R.string.foreigners_Macedonia)
+                            5 -> context.getString(R.string.foreigners_Slovenia)
+                            7 -> context.getString(R.string.foreigners_Serbia)
+                            8 -> context.getString(R.string.foreigners_Vojvodina)
+                            9 -> context.getString(R.string.foreigners_KIM)
+                            else -> context.getString(R.string.invalid_region)
+                        }
+                    }
                     in 10..19 -> {
                         countryOfBirth = context.getString(R.string.bih)
                         placeOfBirth = when (region) {
@@ -135,6 +134,7 @@ class JmbgParser {
                             else -> context.getString(R.string.invalid_region)
                         }
                     }
+                    50 -> countryOfBirth = context.getString(R.string.slovenija)
                     in 71..79 -> {
                         countryOfBirth = context.getString(R.string.serbia)
                         placeOfBirth = when (region) {
@@ -177,8 +177,6 @@ class JmbgParser {
                         }
                     }
                 }
-
-                if (region == 50) countryOfBirth = context.getString(R.string.slovenija)
 
                 if (uniqueNumber in 0..499) {
                     gender = context.getString(R.string.male)
