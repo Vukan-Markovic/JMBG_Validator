@@ -26,7 +26,7 @@
 
             <HorizontalScrollView
                 android:id="@+id/name_scrollview"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
 
             <HorizontalScrollView
                 android:id="@+id/surname_scrollview"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
             <TextView
                 android:id="@+id/jmbg"
                 style="@style/Widget.TextView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/jmbg_label"
                 app:layout_constraintStart_toStartOf="@+id/country_scrollview"
@@ -93,7 +93,7 @@
 
             <HorizontalScrollView
                 android:id="@+id/country_scrollview"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +118,7 @@
 
             <HorizontalScrollView
                 android:id="@+id/region_scrollview"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -144,7 +144,7 @@
             <TextView
                 android:id="@+id/gender"
                 style="@style/Widget.TextView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/gender_label"
                 app:layout_constraintStart_toStartOf="@+id/date_of_birth"
@@ -176,7 +176,7 @@
             <TextView
                 android:id="@+id/ordinal_number_of_birth"
                 style="@style/Widget.TextView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ordinal_number_of_birth_label"
                 app:layout_constraintStart_toStartOf="@+id/date_of_birth"
@@ -193,7 +193,7 @@
             <TextView
                 android:id="@+id/day_of_birth"
                 style="@style/Widget.TextView"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/length_0"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/day_of_birth_label"
                 app:layout_constraintStart_toStartOf="@+id/ordinal_number_of_birth"
