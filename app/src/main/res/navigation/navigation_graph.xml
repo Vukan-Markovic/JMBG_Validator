@@ -7,7 +7,6 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="vukan.com.jmbg_validator.ui.main.MainFragment"
-        android:label="MainFragment"
         tools:layout="@layout/fragment_main">
 
         <action
@@ -22,7 +21,6 @@
     <fragment
         android:id="@+id/resultFragment"
         android:name="vukan.com.jmbg_validator.ui.result.ResultFragment"
-        android:label="ResultFragment"
         tools:layout="@layout/fragment_result">
 
         <argument

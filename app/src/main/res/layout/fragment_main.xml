@@ -1,111 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.MainActivity">
+    style="@style/Widget.App.CardView"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:rippleColor="@color/primary_light">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedName"
-        style="@style/Widget.App.TextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/name"
-        app:counterMaxLength="20"
-        app:helperText="*Obavezno polje"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:scrollbars="none">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="@string/name"
-            android:inputType="textPersonName"
-            android:selectAllOnFocus="true"
-            android:textColor="@color/primary_text" />
+            android:paddingLeft="@dimen/length_16"
+            android:paddingTop="@dimen/length_16"
+            android:paddingRight="@dimen/length_16"
+            android:paddingBottom="@dimen/length_16"
+            tools:context=".ui.MainActivity">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedName"
+                style="@style/Widget.App.TextInputLayout"
+                android:hint="@string/name"
+                app:counterMaxLength="20"
+                app:helperText="*Obavezno polje"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedSurname"
-        style="@style/Widget.App.TextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/surname"
-        app:counterMaxLength="40"
-        app:helperText="*Obavezno polje"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedName">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="@string/name"
+                    android:inputType="textPersonName"
+                    android:maxLength="20" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/surname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="Prezime"
-            android:inputType="textPersonName"
-            android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedSurname"
+                style="@style/Widget.App.TextInputLayout"
+                android:layout_marginTop="@dimen/length_8"
+                android:hint="@string/surname"
+                app:counterMaxLength="40"
+                app:helperText="*Obavezno polje"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedName">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedJMBG"
-        style="@style/Widget.App.TextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/jmbg"
-        app:counterMaxLength="13"
-        app:helperText="*JMBG može da se sastoji samo od cifara"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedSurname">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Prezime"
+                    android:inputType="textPersonName"
+                    android:maxLength="40" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/jmbg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="JMBG"
-            android:imeActionLabel="Validiraj"
-            android:imeOptions="actionDone"
-            android:inputType="number"
-            android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedJMBG"
+                style="@style/Widget.App.TextInputLayout"
+                android:layout_marginTop="@dimen/length_8"
+                android:hint="@string/jmbg"
+                app:counterMaxLength="13"
+                app:helperText="*JMBG može da se sastoji samo od cifara"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedSurname">
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/validateButton"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/primary"
-        android:enabled="false"
-        android:text="@string/validate"
-        android:textColor="@color/primary_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedJMBG"
-        app:layout_constraintVertical_bias="0.2"
-        app:rippleColor="@color/accent"
-        tools:targetApi="lollipop" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/jmbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="JMBG"
+                    android:imeActionLabel="Validiraj"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="13" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/validateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/length_48"
+                android:layout_marginTop="@dimen/length_36"
+                android:layout_marginEnd="@dimen/length_48"
+                android:layout_marginBottom="@dimen/length_4"
+                android:backgroundTint="@color/primary"
+                android:clickable="false"
+                android:enabled="false"
+                android:text="@string/submit"
+                android:textColor="@color/primary_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlinedJMBG"
+                app:layout_constraintVertical_bias="0.2"
+                app:rippleColor="@color/accent"
+                tools:targetApi="lollipop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.google.android.material.card.MaterialCardView>

@@ -5,6 +5,7 @@
       <w>banovina</w>
       <w>beograd</w>
       <w>bihac</w>
+      <w>bihać</w>
       <w>bitolj</w>
       <w>bivše</w>
       <w>bjelovar</w>
@@ -24,8 +25,11 @@
       <w>godina</w>
       <w>gora</w>
       <w>gorazde</w>
+      <w>goražde</w>
       <w>gori</w>
       <w>gospic</w>
+      <w>gospić</w>
+      <w>greška</w>
       <w>hercegodina</w>
       <w>hrvatska</w>
       <w>hrvatskoj</w>
@@ -41,6 +45,7 @@
       <w>koprivnica</w>
       <w>kosovo</w>
       <w>kosovska</w>
+      <w>kosovsko</w>
       <w>kosovu</w>
       <w>kraljevo</w>
       <w>kumanovo</w>
@@ -55,29 +60,37 @@
       <w>mesto</w>
       <w>metohija</w>
       <w>metohiji</w>
+      <w>međimurje</w>
       <w>mitrovica</w>
       <w>morava</w>
       <w>mostar</w>
       <w>može</w>
       <w>muško</w>
+      <w>nedelja</w>
       <w>nije</w>
       <w>niksic</w>
       <w>novi</w>
       <w>obavezan</w>
       <w>obavezno</w>
       <w>ohrid</w>
+      <w>okrug</w>
       <w>osijek</w>
       <w>ostalo</w>
       <w>pakrac</w>
       <w>pancevo</w>
+      <w>pančevo</w>
+      <w>petak</w>
       <w>pljevlja</w>
       <w>podravina</w>
       <w>podrinje</w>
       <w>podunavlje</w>
       <w>pokrajina</w>
       <w>polje</w>
+      <w>pomoravski</w>
+      <w>ponedeljak</w>
       <w>ponovo</w>
       <w>poznato</w>
+      <w>pošalji</w>
       <w>prezime</w>
       <w>prijedor</w>
       <w>prilep</w>
@@ -103,16 +116,20 @@
       <w>sombor</w>
       <w>srbija</w>
       <w>srbiji</w>
+      <w>sreda</w>
       <w>sremska</w>
       <w>stip</w>
       <w>stranci</w>
       <w>strumica</w>
+      <w>subota</w>
       <w>subotica</w>
       <w>sumadija</w>
       <w>tetovo</w>
       <w>tuzla</w>
       <w>unesite</w>
+      <w>utorak</w>
       <w>uzice</w>
+      <w>užice</w>
       <w>validan</w>
       <w>validiraj</w>
       <w>validna</w>
@@ -127,6 +144,8 @@
       <w>zajecar</w>
       <w>zenica</w>
       <w>zrenjanin</w>
+      <w>četvrtak</w>
+      <w>štip</w>
       <w>šumadija</w>
       <w>žensko</w>
     </words>

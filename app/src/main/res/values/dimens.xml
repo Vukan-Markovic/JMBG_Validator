@@ -1,5 +1,10 @@
 <resources>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="min_text_height">48dp</dimen>
+    <dimen name="length_16">16dp</dimen>
+    <dimen name="length_48">48dp</dimen>
+    <dimen name="length_4">4dp</dimen>
+    <dimen name="length_36">36dp</dimen>
+    <dimen name="length_0">0dp</dimen>
+    <dimen name="length_8">8dp</dimen>
+    <dimen name="length_24">24dp</dimen>
+    <dimen name="length_1">1dp</dimen>
 </resources>

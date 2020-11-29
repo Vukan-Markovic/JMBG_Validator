@@ -19,6 +19,7 @@ class MainFragment : Fragment() {
 
     private val viewModel by viewModels<MainViewModel>()
     private lateinit var binding: FragmentMainBinding
+    private var isDataValid: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,98 +30,73 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        if (isDataValid) {
+            binding.validateButton.isEnabled = true
+            binding.validateButton.isClickable = true
+        }
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val ime = binding.name.text.toString()
-        val prezime = binding.surname.text.toString()
-        val jmbg = binding.jmbg.text.toString()
 
         viewModel.formState.observe(viewLifecycleOwner, Observer {
-            val loginState = it ?: return@Observer
-            binding.validateButton.isEnabled = loginState.isDataValid
+            val state = it ?: return@Observer
+            isDataValid = state.isDataValid
+            binding.validateButton.isEnabled = isDataValid
+            binding.validateButton.isClickable = isDataValid
 
-            if (loginState.imeError != null) binding.outlinedName.error =
-                getString(loginState.imeError)
+            if (state.nameError != null) binding.outlinedName.error = getString(state.nameError)
+            else binding.outlinedName.error = null
 
-            if (loginState.prezimeError != null) binding.outlinedSurname.error =
-                getString(loginState.prezimeError)
+            if (state.surnameError != null)
+                binding.outlinedSurname.error = getString(state.surnameError)
+            else binding.outlinedSurname.error = null
 
-            if (loginState.jmbgError != null) binding.outlinedJMBG.error =
-                getString(loginState.jmbgError)
+            if (state.jmbgError != null) binding.outlinedJMBG.error = getString(state.jmbgError)
+            else binding.outlinedJMBG.error = null
         })
 
         binding.validateButton.setOnClickListener {
-            findNavController().navigate(
-                MainFragmentDirections.actionMainFragmentToResultFragment(
-                    User(ime, prezime, jmbg)
-                )
-            )
+            navigate()
         }
 
         binding.name.afterTextChanged {
-            viewModel.loginDataChanged(ime, prezime, jmbg)
+            viewModel.checkName(binding.name.text.toString())
         }
 
         binding.surname.afterTextChanged {
-            viewModel.loginDataChanged(ime, prezime, jmbg)
+            viewModel.checkSurname(binding.surname.text.toString())
         }
 
         binding.jmbg.apply {
             afterTextChanged {
-                viewModel.loginDataChanged(ime, prezime, jmbg)
+                viewModel.checkJMBG(binding.jmbg.text.toString())
             }
 
             setOnEditorActionListener { _, actionId, _ ->
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE ->
-                        findNavController().navigate(
-                            MainFragmentDirections.actionMainFragmentToResultFragment(
-                                User(ime, prezime, jmbg)
-                            )
-                        )
+                        if (isDataValid) navigate()
                 }
                 false
             }
         }
-
-//        binding.jmbg.setOnKeyListener { view, keyCode, _ ->
-//            handleKeyEvent(
-//                view,
-//                keyCode
-//            )
-//        }
-
-//        val inflater = layoutInflater
-//        val container: ViewGroup = findViewById(R.id.custom_toast_container)
-//        val layout: View = inflater.inflate(R.layout.custom_toast, container)
-//        val text: TextView = layout.findViewById(R.id.text)
-//
-//        with(Toast(context)) {
-//            setGravity(Gravity.CENTER_VERTICAL, 0, 0)
-//            duration = Toast.LENGTH_LONG
-//            view = layout
-//            setText(text.text)
-//            show()
-//        }
-
-        // Clear error text
-        //passwordLayout.error = null
-
-        // Get input text
-        //val inputText = outlinedTextField.editText?.text.toString()
-
-        //outlinedTextField.editText?.doOnTextChanged { inputText, _, _, _ ->
-        // Respond to input text change
-        //}
     }
-//    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
-//        if (keyCode == KeyEvent.KEYCODE_ENTER) {
 
-//            return true
-//        }
-//
-//        return false
-//    }
+    private fun navigate() {
+        findNavController().navigate(
+            MainFragmentDirections.actionMainFragmentToResultFragment(
+                User(
+                    binding.name.text.toString(),
+                    binding.surname.text.toString(),
+                    binding.jmbg.text.toString()
+                )
+            )
+        )
+    }
 
     private fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
         this.addTextChangedListener(object : TextWatcher {
