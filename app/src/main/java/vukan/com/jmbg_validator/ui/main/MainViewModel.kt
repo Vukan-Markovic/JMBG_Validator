@@ -49,7 +49,7 @@ class MainViewModel : ViewModel() {
     }
 
     private fun isDataValid() {
-        if (nameError == null && surnameError == null && jmbgError == null) _form.value =
-            FormState(isDataValid = true)
+        if (nameError == null && surnameError == null && jmbgError == null)
+            _form.value = FormState(isDataValid = true)
     }
 }
