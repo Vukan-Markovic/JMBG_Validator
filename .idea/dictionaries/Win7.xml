@@ -11,11 +11,14 @@
       <w>bjelovar</w>
       <w>bosna</w>
       <w>broj</w>
+      <w>centralna</w>
       <w>cifara</w>
       <w>cifra</w>
+      <w>cifru</w>
       <w>crna</w>
       <w>crnoj</w>
       <w>dalmacija</w>
+      <w>devetu</w>
       <w>djakovica</w>
       <w>doboj</w>
       <w>drzava</w>
@@ -31,6 +34,7 @@
       <w>gospić</w>
       <w>greška</w>
       <w>hercegodina</w>
+      <w>hercegovina</w>
       <w>hrvatska</w>
       <w>hrvatskoj</w>
       <w>imati</w>
@@ -69,12 +73,15 @@
       <w>nedelja</w>
       <w>nije</w>
       <w>niksic</w>
+      <w>niksić</w>
+      <w>nikšić</w>
       <w>novi</w>
       <w>obavezan</w>
       <w>obavezno</w>
       <w>ohrid</w>
       <w>okrug</w>
       <w>osijek</w>
+      <w>osmu</w>
       <w>ostalo</w>
       <w>pakrac</w>
       <w>pancevo</w>
@@ -89,6 +96,7 @@
       <w>pomoravski</w>
       <w>ponedeljak</w>
       <w>ponovo</w>
+      <w>poslednju</w>
       <w>poznato</w>
       <w>pošalji</w>
       <w>prezime</w>
@@ -97,6 +105,8 @@
       <w>primorje</w>
       <w>pristina</w>
       <w>prizren</w>
+      <w>proverite</w>
+      <w>prvih</w>
       <w>pula</w>
       <w>redni</w>
       <w>regija</w>
@@ -106,6 +116,7 @@
       <w>ruma</w>
       <w>samo</w>
       <w>sastoji</w>
+      <w>sedam</w>
       <w>sesti</w>
       <w>sfrj</w>
       <w>sisak</w>
@@ -142,9 +153,11 @@
       <w>vukan</w>
       <w>zadar</w>
       <w>zajecar</w>
+      <w>zaječar</w>
       <w>zenica</w>
       <w>zrenjanin</w>
       <w>četvrtak</w>
+      <w>đakovica</w>
       <w>štip</w>
       <w>šumadija</w>
       <w>žensko</w>

@@ -8,9 +8,9 @@
     <string name="invalid_surname">Prezime je obavezno!</string>
     <string name="invalid_jmbg">JMBG je obavezan!</string>
     <string name="invalid_jmbg_length">JMBG mora imati 13 cifara!</string>
-    <string name="invalid_jmbg_date">Datum nije validan!</string>
-    <string name="invalid_jmbg_region">Regija nije validna!</string>
-    <string name="invalid_jmbg_control_digit">Kontrolna cifra nije validna!</string>
+    <string name="invalid_jmbg_date">Datum nije validan, proverite prvih sedam cifara!</string>
+    <string name="invalid_jmbg_region">Regija nije validna, proverite osmu i devetu cifru!</string>
+    <string name="invalid_jmbg_control_digit">Kontrolna cifra nije validna, proverite poslednju cifru!</string>
     <string name="error">Greška</string>
     <string name="name_label">Ime:</string>
     <string name="surname_label">Prezime:</string>
@@ -21,7 +21,7 @@
     <string name="ordinal_number_and_day_of_birth_label">Redni broj rođenja:</string>
     <string name="day_of_birth_label">Dan rođenja:</string>
     <string name="foreigners">Stranci bez državljanstva bivše SFRJ</string>
-    <string name="foreigners_BIH">Stranci u BiH</string>
+    <string name="foreigners_BiH">Stranci u BiH</string>
     <string name="foreigners_Montenegro">Stranci u Crnoj Gori</string>
     <string name="foreigners_Croatia">Stranci u Hrvatskoj</string>
     <string name="foreigners_Macedonia">Stranci u Makedoniji</string>
@@ -32,14 +32,14 @@
     <string name="invalid_region">Nije Poznato</string>
     <string name="pristina">Pristina</string>
     <string name="kosovska_mitrovica">Kosovska Mitrovica</string>
-    <string name="pec">Pec</string>
-    <string name="djakovica">Djakovica</string>
+    <string name="pec">Peć</string>
+    <string name="djakovica">Đakovica</string>
     <string name="prizren">Prizren</string>
     <string name="kosovsko_pomoravski_okrug">Kosovsko Pomoravski okrug</string>
     <string name="male">Muško</string>
     <string name="female">Žensko</string>
     <string name="date_of_birth_label">Datum rođenja:</string>
-    <string name="bih">Bosna i Hercegodina</string>
+    <string name="bih">Bosna i Hercegovina</string>
     <string name="banja_luka">Banja Luka</string>
     <string name="bihac">Bihać</string>
     <string name="doboj">Doboj</string>
@@ -52,13 +52,14 @@
     <string name="zenica">Zenica</string>
     <string name="montenegro">Crna Gora</string>
     <string name="podgorica">Podgorica</string>
-    <string name="niksic">Niksic</string>
+    <string name="niksic">Nikšić</string>
     <string name="pljevlja">Pljevlja</string>
     <string name="croatia">Hrvatska</string>
     <string name="croatia_1">Osijek, Slavonija regija</string>
     <string name="sremska_mitrovica">Sremska Mitrovica</string>
     <string name="ruma">Ruma</string>
     <string name="serbia">Srbija</string>
+    <string name="central_Serbia">Centralna Srbija, Srbija</string>
     <string name="kikinda">Kikinda</string>
     <string name="novi_sad">Novi Sad</string>
     <string name="sombor">Sombor</string>
@@ -71,7 +72,7 @@
     <string name="nis">Niš</string>
     <string name="juzna_morava">Južna Morava</string>
     <string name="slovenija">Slovenija</string>
-    <string name="zajecar">Zajecar</string>
+    <string name="zajecar">Zaječar</string>
     <string name="podunavlje">Podunavlje</string>
     <string name="podrinje_kolubara">Podrinje i Kolubara</string>
     <string name="kraljevo">Kraljevo</string>
@@ -103,4 +104,6 @@
     <string name="thursday">Četvrtak</string>
     <string name="friday">Petak</string>
     <string name="saturday">Subota</string>
+    <string name="required_field">*Obavezno polje</string>
+    <string name="jmbg_only_digits">*JMBG može da se sastoji samo od cifara</string>
 </resources>

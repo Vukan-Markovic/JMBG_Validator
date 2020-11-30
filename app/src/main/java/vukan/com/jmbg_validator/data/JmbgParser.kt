@@ -67,7 +67,7 @@ class JmbgParser {
                     in 1..9 -> {
                         countryOfBirth = context.getString(R.string.foreigners)
                         placeOfBirth = when (region) {
-                            1 -> context.getString(R.string.foreigners_BIH)
+                            1 -> context.getString(R.string.foreigners_BiH)
                             2 -> context.getString(R.string.foreigners_Montenegro)
                             3 -> context.getString(R.string.foreigners_Croatia)
                             4 -> context.getString(R.string.foreigners_Macedonia)
@@ -136,7 +136,7 @@ class JmbgParser {
                     }
                     50 -> countryOfBirth = context.getString(R.string.slovenija)
                     in 71..79 -> {
-                        countryOfBirth = context.getString(R.string.serbia)
+                        countryOfBirth = context.getString(R.string.central_Serbia)
                         placeOfBirth = when (region) {
                             71 -> context.getString(R.string.beograd)
                             72 -> context.getString(R.string.sumadija)
@@ -181,7 +181,7 @@ class JmbgParser {
                 if (uniqueNumber in 0..499) {
                     gender = context.getString(R.string.male)
                     ordinalNumberOfBirth = uniqueNumber + 1
-                } else if (uniqueNumber in 501..999) {
+                } else if (uniqueNumber in 500..999) {
                     gender = context.getString(R.string.female)
                     ordinalNumberOfBirth = uniqueNumber - 499
                 }

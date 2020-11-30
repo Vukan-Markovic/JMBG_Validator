@@ -12,6 +12,7 @@ import androidx.navigation.fragment.navArgs
 import vukan.com.jmbg_validator.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {
+
     private val viewModel by viewModels<ResultViewModel>()
     private lateinit var binding: FragmentResultBinding
     private val args by navArgs<ResultFragmentArgs>()

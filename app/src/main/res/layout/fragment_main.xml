@@ -27,7 +27,7 @@
                 style="@style/Widget.App.TextInputLayout"
                 android:hint="@string/name"
                 app:counterMaxLength="20"
-                app:helperText="*Obavezno polje"
+                app:helperText="@string/required_field"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -48,7 +48,7 @@
                 android:layout_marginTop="@dimen/length_8"
                 android:hint="@string/surname"
                 app:counterMaxLength="40"
-                app:helperText="*Obavezno polje"
+                app:helperText="@string/required_field"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedName">
@@ -57,7 +57,7 @@
                     android:id="@+id/surname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints="Prezime"
+                    android:autofillHints="@string/surname"
                     android:inputType="textPersonName"
                     android:maxLength="40" />
 
@@ -69,7 +69,7 @@
                 android:layout_marginTop="@dimen/length_8"
                 android:hint="@string/jmbg"
                 app:counterMaxLength="13"
-                app:helperText="*JMBG može da se sastoji samo od cifara"
+                app:helperText="@string/jmbg_only_digits"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/outlinedSurname">
@@ -78,8 +78,8 @@
                     android:id="@+id/jmbg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints="JMBG"
-                    android:imeActionLabel="Validiraj"
+                    android:autofillHints="@string/jmbg"
+                    android:imeActionLabel="@string/submit"
                     android:imeOptions="actionDone"
                     android:inputType="number"
                     android:maxLength="13" />

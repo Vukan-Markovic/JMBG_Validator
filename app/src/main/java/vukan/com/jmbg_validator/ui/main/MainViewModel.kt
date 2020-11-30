@@ -8,6 +8,7 @@ import vukan.com.jmbg_validator.data.JmbgParser
 
 
 class MainViewModel : ViewModel() {
+
     private val _form = MutableLiveData<FormState>()
     val formState: LiveData<FormState> = _form
     private var nameError: Int? = null
