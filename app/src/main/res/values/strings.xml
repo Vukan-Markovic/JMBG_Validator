@@ -8,9 +8,9 @@
     <string name="invalid_surname">Prezime je obavezno!</string>
     <string name="invalid_jmbg">JMBG je obavezan!</string>
     <string name="invalid_jmbg_length">JMBG mora imati 13 cifara!</string>
-    <string name="invalid_jmbg_date">Datum nije validan, proverite prvih sedam cifara!</string>
-    <string name="invalid_jmbg_region">Regija nije validna, proverite osmu i devetu cifru!</string>
-    <string name="invalid_jmbg_control_digit">Kontrolna cifra nije validna, proverite poslednju cifru!</string>
+    <string name="invalid_jmbg_date">Datum nije validan!</string>
+    <string name="invalid_jmbg_region">Regija nije validna!</string>
+    <string name="invalid_jmbg_control_digit">Kontrolna cifra nije validna!</string>
     <string name="error">Greška</string>
     <string name="name_label">Ime:</string>
     <string name="surname_label">Prezime:</string>
