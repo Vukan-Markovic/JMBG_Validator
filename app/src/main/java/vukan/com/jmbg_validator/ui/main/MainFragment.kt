@@ -37,31 +37,6 @@ class MainFragment : Fragment() {
             binding.validateButton.isEnabled = true
             binding.validateButton.isClickable = true
         }
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        viewModel.formState.observe(viewLifecycleOwner, Observer {
-            val state = it ?: return@Observer
-            isDataValid = state.isDataValid
-            binding.validateButton.isEnabled = isDataValid
-            binding.validateButton.isClickable = isDataValid
-
-            if (state.nameError != null) binding.outlinedName.error = getString(state.nameError)
-            else binding.outlinedName.error = null
-
-            if (state.surnameError != null)
-                binding.outlinedSurname.error = getString(state.surnameError)
-            else binding.outlinedSurname.error = null
-
-            if (state.jmbgError != null) binding.outlinedJMBG.error = getString(state.jmbgError)
-            else binding.outlinedJMBG.error = null
-        })
-
-        binding.validateButton.setOnClickListener {
-            navigate()
-        }
 
         binding.name.afterTextChanged {
             viewModel.checkName(binding.name.text.toString())
@@ -83,6 +58,33 @@ class MainFragment : Fragment() {
                 }
                 false
             }
+        }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        viewModel.formState.observe(viewLifecycleOwner, Observer {
+            val state = it ?: return@Observer
+            isDataValid = state.isDataValid
+            binding.validateButton.isEnabled = isDataValid
+            binding.validateButton.isClickable = isDataValid
+
+            if (state.nameError != null && state.nameError != 0) binding.outlinedName.error =
+                getString(state.nameError)
+            else binding.outlinedName.error = null
+
+            if (state.surnameError != null && state.surnameError != 0)
+                binding.outlinedSurname.error = getString(state.surnameError)
+            else binding.outlinedSurname.error = null
+
+            if (state.jmbgError != null && state.jmbgError != 0) binding.outlinedJMBG.error =
+                getString(state.jmbgError)
+            else binding.outlinedJMBG.error = null
+        })
+
+        binding.validateButton.setOnClickListener {
+            navigate()
         }
     }
 

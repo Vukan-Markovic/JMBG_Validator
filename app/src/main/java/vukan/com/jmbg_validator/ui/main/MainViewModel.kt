@@ -11,9 +11,9 @@ class MainViewModel : ViewModel() {
 
     private val _form = MutableLiveData<FormState>()
     val formState: LiveData<FormState> = _form
-    private var nameError: Int? = null
-    private var surnameError: Int? = null
-    private var jmbgError: Int? = null
+    private var nameError: Int? = 0
+    private var surnameError: Int? = 0
+    private var jmbgError: Int? = 0
 
     fun checkName(name: String) {
         if (name.isBlank()) {
