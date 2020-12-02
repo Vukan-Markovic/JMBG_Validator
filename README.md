@@ -1,5 +1,7 @@
 # JMBG_Validator
 
+![App icon](https://play-lh.googleusercontent.com/Mv4s9bGCcY0OgaFnyDXNGgcKEodIjv7SOtO87VesEn-G_mAT1mWOnm73kRenmIIjwGE=s180-rw)
+
 Aplikacija omogućava validaciju i ekstrakciju podataka iz Jedinstvenog matičnog broja građana (JMBG). 
 
 Na osnovu unetog JMBG-a aplikacija prikazuje sledeće podatke: državu rođenja, regiju rođenja, pol, datum rođenja, redni broj rođenja i dan rođenja.
