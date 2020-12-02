@@ -85,3 +85,4 @@ lint/reports/
 
 .DS_Store
 local.properties
+/private_key.pepk
