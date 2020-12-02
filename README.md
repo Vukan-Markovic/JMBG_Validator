@@ -1,4 +1,4 @@
-# JMBG_Validator
+# JMBG Validator
 
 ![App icon](https://play-lh.googleusercontent.com/Mv4s9bGCcY0OgaFnyDXNGgcKEodIjv7SOtO87VesEn-G_mAT1mWOnm73kRenmIIjwGE=s180-rw)
 
