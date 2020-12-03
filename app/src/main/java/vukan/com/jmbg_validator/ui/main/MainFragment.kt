@@ -70,16 +70,16 @@ class MainFragment : Fragment() {
             binding.validateButton.isEnabled = isDataValid
             binding.validateButton.isClickable = isDataValid
 
-            if (state.nameError != null && state.nameError != 0) binding.outlinedName.error =
-                getString(state.nameError)
+            if (state.nameError != null && state.nameError != 0)
+                binding.outlinedName.error = getString(state.nameError)
             else binding.outlinedName.error = null
 
             if (state.surnameError != null && state.surnameError != 0)
                 binding.outlinedSurname.error = getString(state.surnameError)
             else binding.outlinedSurname.error = null
 
-            if (state.jmbgError != null && state.jmbgError != 0) binding.outlinedJMBG.error =
-                getString(state.jmbgError)
+            if (state.jmbgError != null && state.jmbgError != 0)
+                binding.outlinedJMBG.error = getString(state.jmbgError)
             else binding.outlinedJMBG.error = null
         })
 

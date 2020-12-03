@@ -122,7 +122,7 @@ class JmbgParser {
                     in 41..49 -> {
                         countryOfBirth = context.getString(R.string.macedonia)
                         placeOfBirth = when (region) {
-                            41 -> context.getString(R.string.bitolj)
+                            41 -> context.getString(R.string.bitola)
                             42 -> context.getString(R.string.kumanovo)
                             43 -> context.getString(R.string.ohrid)
                             44 -> context.getString(R.string.prilep)
