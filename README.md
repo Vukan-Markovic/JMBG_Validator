@@ -8,4 +8,4 @@ Na osnovu unetog JMBG-a aplikacija prikazuje sledeće podatke: državu rođenja,
 
 Aplikacija ni na koji način ne čuva unete JMBG brojeve već samo služi za njihovu validaciju i prikaz podataka iz njih.
 
-![Input screen](https://lh3.googleusercontent.com/EO3q-R3393LqugaIml7hP_jGiMc8qfcOFtCcvNjfNh1dkIBzCUln_lmt3AHdNMtKgwo) ![Result screen](https://lh3.googleusercontent.com/WXJCR2_qWEer5j4qYfSP2jE9gLoJrrNxyaXEEhuGP9dxoMl_KNbGudMVOsYMPxyCT1E)
+![Input screen](https://play-lh.googleusercontent.com/uc8_yZnH8GBpkUfbNm7LsNheQS_6raPLqVMfPfLab0OGdDBBi_2PJdoepN8PDRDcGA=w1366-h657-rw) ![Result screen](https://play-lh.googleusercontent.com/Gpc0XJM8hbvketMbXHamKa6eyGO9BkrEP5k9mhzokFPKFogu5VY_5tao9sTHaAIOFtYl=w1366-h657-rw)
